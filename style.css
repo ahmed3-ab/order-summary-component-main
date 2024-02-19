@@ -1,0 +1,178 @@
+/* css reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+/* ------------------------------------------------------ */
+
+/* variables */
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-blue: hsl(223, 47%, 23%);
+
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-700: 700;
+  --fw-900: 900;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1.6rem;
+  font-weight: var(--fw-400);
+  line-height: 1.5;
+  background-color: var(--pale-blue);
+  color: var(--desaturated-blue);
+  -webkit-font-smoothing: antialiased;
+}
+
+.card {
+  background-color: #fff;
+  max-width: 45rem;
+  margin: 5rem auto;
+  border-radius: 1rem;
+  overflow: hidden;
+  
+}
+
+.info-container {
+  padding: 4rem 4.8rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-container h1 {
+  font-size: 3.2rem;
+  font-weight: var(--fw-900);
+  text-align: center;
+  color: var(--Dark-blue);
+  margin-bottom: 1rem;
+}
+
+strong {
+  color: var(--Dark-blue);
+  font-weight: var(--fw-900);
+}
+
+.price {
+  background-color: var(--very-pale-blue);
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 1.6rem;
+  align-items: center;
+  padding: 2.4rem 3.2rem;
+  border-radius: 1rem;
+  margin: 2.4rem 0;
+}
+
+a.change {
+  margin-left: auto;
+  font-weight: var(--fw-900);
+  color: var(--bright-blue);
+}
+
+a.change:hover {
+  text-decoration: none;
+  color: #746bf1;
+}
+
+.cta {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.cta a {
+  text-decoration: none;
+  font-weight: var(--fw-700);
+}
+
+.cta a:nth-of-type(2) {
+  color: inherit;
+}
+
+.cta a:nth-of-type(2):hover {
+  color: var(--Dark-blue);
+}
+
+.cta-special:link,
+.cta-special:visited {
+  background-color: var(--bright-blue);
+  color: #fff;
+  padding: 1.6rem 3.2rem;
+  border-radius: 1rem;
+  box-shadow: 10px 15px 20px 4px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  margin: 1.6rem 0;
+}
+
+.cta-special:hover,
+.cta-special:active {
+  background-color: #746bf1;
+}
+
+@media (max-width: 376px){
+
+  body {
+    font-size: 1.4rem; 
+  }
+  .card {
+    max-width: 30rem;
+    margin: 50% auto;
+}
+
+.info-container {
+  padding: 1.6rem 2.4rem;
+}
+
+.price{
+  gap: 1rem;
+  padding: 1.6rem;
+  margin-bottom: 1rem;
+}
+}
